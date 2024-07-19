@@ -39,9 +39,10 @@ resource = ['blast', 'boost', 'gcc', 'go', 'matlab', 'python', 'spss']
 
 # variations on how a user might phrase their search
 # edit as needed
-question = ['Does any {} have {}',
-            'Which {} has {}',
-            'What {} has {}']
+question = ['Does any {0} have {1}',
+            'Which {0} has {1}',
+            'What {0} has {1}',
+            'Where is {1}']
 
 
 if __name__ == '__main__':
@@ -53,4 +54,4 @@ if __name__ == '__main__':
             break
         else:
             count += 1
-    print(count)
+    # print(count)
