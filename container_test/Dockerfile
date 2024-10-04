@@ -1,10 +1,15 @@
-FROM opensuse/tumbleweed
+#FROM opensuse/tumbleweed
+#WORKDIR /root
+#
+#COPY private/setup.sh /root
+#RUN /root/setup.sh && rm -f /root/setup.sh
+#
+#VOLUME /data
+
+FROM debian:latest
 WORKDIR /root
 
-RUN zypper install -y git python3 ollama nano bash-completion
+COPY private/setup.sh /root
+RUN /root/setup.sh && rm -f /root/setup.sh
 
 VOLUME /data
-
-
-
-
