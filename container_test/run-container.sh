@@ -1,3 +1,7 @@
 #!/bin/bash
 
-podman run -t -i ollama:latest
+podman run \
+    -ti \
+    --rm \
+    --mount type=volume,source="root_home",target="/root" \
+    chatbot:latest

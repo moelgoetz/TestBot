@@ -3,23 +3,16 @@
 # exit on any error
 set -e
 
+# add some comforts
+echo "alias ll='ls -lAF'" >> /root/.bashrc
+
 # install dependencies
-apt-get update
-apt-get install -y \
+apt-get update && apt-get install -y \
     curl \
-    pciutils
+    pciutils || exit 1
 
 # install ollama
-curl -fsSL https://ollama.com/install.sh | sh
+#tar -C /usr -xzf ollama-linux-amd64.tgz
 
 # post-build cleanup
 rm -rf /var/lib/apt/lists/*
-
-
-
-
-# install dependencies
-#zypper in -y \
-#    ollama \
-#    systemd
-

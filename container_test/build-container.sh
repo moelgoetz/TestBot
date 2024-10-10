@@ -1,3 +1,7 @@
 #!/bin/bash
 
-podman build -f Dockerfile -t ollama .
+if [ -f artifacs/ollama-linux-amd64.tgz ]; then
+    ./update-ollama
+fi
+
+podman build -f Dockerfile -t chatbot .
