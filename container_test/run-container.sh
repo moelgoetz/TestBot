@@ -1,6 +1,6 @@
 #!/bin/bash
 
-podman run \
+docker run \
     -ti \
     --rm \
     --mount type=volume,source="root_home",target="/root" \

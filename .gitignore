@@ -159,4 +159,5 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 .idea/
 
-/container_test/artifacts/ollama-linux-amd64.tgz
+#artifacts
+*.tgz

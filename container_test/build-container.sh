@@ -1,7 +1,7 @@
 #!/bin/bash
 
-if [ -f artifacs/ollama-linux-amd64.tgz ]; then
-    ./update-ollama
+if [ -f artifacs/ollama-linux-arm64.tgz ]; then
+    ./update-ollama.sh
 fi
 
-podman build -f Dockerfile -t chatbot .
+docker build -f Dockerfile -t chatbot .
