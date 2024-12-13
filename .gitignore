@@ -163,6 +163,5 @@ cython_debug/
 .idea/
 
 #artifacts
-.tgz
-.zip
+*.tgz
 
